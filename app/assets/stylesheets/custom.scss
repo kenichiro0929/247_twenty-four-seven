@@ -22,3 +22,35 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+/* ここからヘッダー */
+
+header{
+	position:rerative;
+
+}
+
+img.logo{
+	padding-top: 30px;
+}
+
+ul.nav.navbar-nav.navbar-right{
+	margin-top: -30px;
+}
+
+
+/* ここからホーム */
+
+img.background{
+	object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
