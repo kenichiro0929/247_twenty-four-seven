@@ -9,9 +9,14 @@
         <%= @user.name %>
       </h1>
     </section>
-    <!-- カレンダー追加 -->
-    <body data-turbolinks="false">
-    	<%= render 'event/timetable' %>
-  	</body>
   </aside>
+  <div class="col-md-8">
+
+  	<% if @user.tasks.any? %>
+  	<h3><%= @user.name %>のタスクは<%= @user.tasks.count %></h3>
+	<li class="task">
+		<%= render @task %>
+	</li>
+	<% end %>
+  </div>
 </div>

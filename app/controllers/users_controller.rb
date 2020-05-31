@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @task = @user.tasks
   end
 
   def new
@@ -44,13 +45,7 @@ private
 
   # beforeアクション
   # ログインしているかの確認
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end
-  end
+  
 
   # @userがcurrent_userでなければホームに戻る
   def correct_user

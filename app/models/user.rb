@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :tasks,dependent: :destroy
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
@@ -57,6 +58,10 @@ class User < ApplicationRecord
 	# 再設定メールが２時間以上前ならtrue
 	def password_reset_expired?
 		reset_send_at < 2.hours.ago
+	end
+
+	def feed
+		Task.where("user_id=?",id)
 	end
 
 	private

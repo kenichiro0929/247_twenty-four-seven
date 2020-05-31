@@ -1,6 +1,22 @@
-<div class="container-fluid">
+<% if logged_in?%>
+	<div class ="row">
+		<aside class="col-md-4">
+			<secttion class="user_info">
+				<%= render "shared/user_info" %>
+			</secttion>
+			<section class="task_form">
+				<%= render "shared/task_form" %>
+			</section>
+		</aside>
+	<div class ="col-md-8">
+		<section class="task_list">
+			<h3>タスクフィード</h3>
+			<%= render "shared/feed" %>
+		</section>
+	</div>
 
-<%= image_tag '247top_image2.png',class:"background" %>
-
-
-</div>
+<% else %>
+		<div class="container-fluid">
+			<%= image_tag "247top_image2.png",class:"background" %>
+		</div>
+<% end %>
