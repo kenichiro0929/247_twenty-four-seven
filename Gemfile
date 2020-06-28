@@ -29,6 +29,12 @@ gem 'jquery-rails', '>= 4.3.2'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
+gem 'gon'
+
+gem 'kaminari'
+
+gem 'rails-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

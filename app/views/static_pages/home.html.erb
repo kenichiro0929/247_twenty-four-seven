@@ -1,22 +1,35 @@
 <% if logged_in?%>
-	<div class ="row">
-		<aside class="col-md-4">
-			<secttion class="user_info">
+ 
+	<div class ="row" >
+		<aside class="col-xs-12  col-md-3 col-lg-4" id = "task_form">
+			<!-- <secttion class="user_info">
 				<%= render "shared/user_info" %>
-			</secttion>
+			</secttion> -->
 			<section class="task_form">
-				<%= render "shared/task_form" %>
+				<%= render "tasks/form" %>
 			</section>
 		</aside>
-	<div class ="col-md-8">
-		<section class="task_list">
-			<h3>タスクフィード</h3>
-			<%= render "shared/feed" %>
+	<div class ="col-xs-12 col-md-5 col-lg-4">
+		<section class="task_board">
+			<%= render "tasks/to_do_task" %>
 		</section>
 	</div>
+	<div class ="col-xs-12 col-md-4 col-lg-4">
+		<section class="task_board">
+			<%= render "tasks/done_task" %>
+		</section>
+	</div>
+</div>
 
 <% else %>
 		<div class="container-fluid">
-			<%= image_tag "247top_image2.png",class:"background" %>
+				<%= link_to image_tag("logo.png", class:"top_logo"), "/" %>
+				<%= image_tag "247top_4.png",class:"background" %>
 		</div>
+
+		<div class = "about_tfs">
+			<p>247-twenty-four-seven- helps to manage your time.</p>
+			<p>Let's create your ToDo list and record the time.</p>
+		</div>
+	</div>
 <% end %>

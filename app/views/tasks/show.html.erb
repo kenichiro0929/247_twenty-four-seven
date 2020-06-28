@@ -1,0 +1,12 @@
+<% provide(:title, "Time") %>
+	
+	<div class="record_task_card">
+		<%= @task.content %>
+	</div>
+	<div class = "timer">
+		<%= render "shared/timer" %>
+	</div>
+	<div class= "record_button_wrap">
+		<%= render 'timer_form' %>
+	</div>
+

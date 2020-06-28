@@ -12,4 +12,10 @@ class ApplicationController < ActionController::Base
     		end
   		end
 
+
+      def task_check
+  @task = current_user.tasks.find_by(id: params[:id])
+end
+
+
 end

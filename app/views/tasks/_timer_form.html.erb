@@ -1,0 +1,16 @@
+<div class = "record_button">
+<%= form_with(model: @task, local: true) do |f| %>
+
+	<%= f.hidden_field :elapsed_time, class: "task-controll" %>
+
+	<%= f.submit "record", class: "btn_record" %>
+
+<% end %>
+
+</div>
+
+
+
+
+
+

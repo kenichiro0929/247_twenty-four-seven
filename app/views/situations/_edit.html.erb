@@ -1,0 +1,19 @@
+<% if @task.done == 0 %>
+	<%= form_with(model: @task, url: {controller: "situations",action:"update"}, local: true) do |f| %>
+
+	<%= f.hidden_field :done, value: "1", class: "task-controll" %>
+
+	<%= f.submit "Done", class: "btn btn-outline-secondary btn-sm btn-block" %>
+
+<% end %>
+
+<% else%>
+<%= form_with(model: @task, url: {controller: "situations",action:"update"}, local: true) do |f| %>
+
+	<%= f.text_field :done, value: "0", class: "task-controll" %>
+
+	<%= f.submit "Done", class: "btn btn-outline-secondary btn-sm btn-block" %>
+
+<% end%>
+
+<% end %>

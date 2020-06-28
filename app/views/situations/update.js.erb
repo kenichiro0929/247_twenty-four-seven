@@ -1,0 +1,5 @@
+$('#done_task').html("<%= escape_javascript(render 'tasks/done_task', done_tasks: @done_tasks) %>")
+$('#to_do_task').html("<%= escape_javascript(render 'tasks/to_do_task', to_do_tasks: @to_do_tasks) %>")
+location.reload()
+
+

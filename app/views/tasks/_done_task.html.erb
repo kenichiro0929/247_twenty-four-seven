@@ -1,0 +1,44 @@
+
+<h3>Done</h3>
+
+
+<% @done_tasks.each do |task| %>
+	<div class="task_card">
+		<div class="task_content">
+			<h4><%= task.content %></h4>
+		</div>
+		<div class="task_function">
+			<ul id = "btn_nav">
+				<li class = "menu_btn"><%= link_to edit_task_path(task),class: "menu_btn_function" do%>
+				<span class="material-icons">create</span>edit<% end %></li>
+
+				<li class = "menu_btn"><%= link_to task,method: :delete,data:{confirm:"you sure?"},class: "menu_btn_function" do %>
+				<span class="material-icons">delete</span>delete<% end %></li>
+			</ul>
+
+			<div class = "check_box">
+				<div class = "done">
+					<%= form_with(model: @task, url: {controller: "situations",action:"update"},url:done_path(task_id: task.id), remote: true) do |f| %>
+
+					<%= f.hidden_field :done, value: "0", class: "task-controll" %>
+
+					<%= button_tag type: "submit", class: "btn_done" do %>
+					<span class="material-icons">undo</span>ToDo<% end %>
+
+					<% end%>
+				</div>
+				<div class = "task_time">
+					<% if !task.elapsed_time.nil? %>
+						<p class = "task_time">Task Time :
+							<% if task.elapsed_time < 60 %><%= task.elapsed_time %>sec<% end %>
+							<% if task.elapsed_time >= 60 && task.elapsed_time < 3600  %><%= task.elapsed_time/60 %>min<%= task.elapsed_time%60 %>sec<% end %>
+							<% if task.elapsed_time >= 3600 %><%= task.elapsed_time/3600 %>hrs<%= task.elapsed_time%3600/60 %>min<%= task.elapsed_time%3600%60 %>sec<% end %>
+						</p>
+					<% end %>
+				</div>
+			</div>
+	</div>
+
+
+</div>
+<% end %>

@@ -1,10 +1,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* universal */
+
+/* ---------- 共通 ---------- */
+
+html, body{
+	height: 100%;
+  font-size: 62.5%;
+  margin-top: 15px;
+.container{
+	height: 100%;
+ .row{
+ 	height: 100%;
+  }
+ }
+}
+
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 section {
@@ -23,34 +37,348 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* ここからヘッダー */
+
+#error_explanation{
+  background-color:#f3dfde;
+  color: #b25553;
+
+}
+
+/* ---------- ここからヘッダー --------- */
 
 header{
 	position:rerative;
-
+  background-color: #333333;
+a{
+  color: #333333;
+ }
 }
+
 
 img.logo{
-	padding-top: 30px;
-}
-
-ul.nav.navbar-nav.navbar-right{
-	margin-top: -30px;
+	padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 
-/* ここからホーム */
+
+
+#header_menu{
+  margin-top: 25px;
+  padding-right: 25px;
+  font-size: 1.4rem;
+a{
+  color:#333333;
+}
+}
+
+
+
+#account.dropdown-toggle{
+  color: #ffffff;
+}
+a#about{
+color: #ffffff;
+float: right;
+}
+a#login{
+  color: #ffffff;
+  float:right;
+}
+.dropdown{
+  float:right;
+}
+
+li.about{
+float: right;
+}
+li.login{
+  float:right;
+}
+
+
+
+/* ---------- ここからホーム ---------- */
 
 img.background{
 	object-fit: cover;
-    height: 100%;
-    width: 100%;
+
+
 }
 
 .container-fluid{
 	position: absolute;
-	top: 0;
-	left: 0;
 	padding-left: 0;
 	padding-right: 0;
+  display: flex;
+  flex-direction: column;
 }
+
+.about_tfs{
+position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    top:600px;
+    margin-left:25px;
+}
+
+/* ---------- 新規登録フォーム ---------- */
+
+.checkbox.inline{
+  margin-left: 20px;
+}
+
+
+/* ---------- ここから変更フォーム ---------- */
+
+.user_form {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+.btn_function{
+  margin-top:15px ;
+}
+}
+
+.user_form p{
+  font-size: 1.5rem;
+}
+
+
+
+/* ---------- ここからタスク---------- */
+
+#task_form{
+  height: 20%;
+.btn_function{
+  margin-top: 15px;
+}
+}
+
+.col-md-4,.col-md-5{
+  height: 100%
+  }
+
+.task_board{
+	background-color: whitesmoke;
+	border-radius: 5px;
+	height: 90%;
+ h3{
+ 	margin-left: 10px;
+  margin-bottom: 20px
+  }
+}
+
+.to_do_task_form{
+  height: 28px;
+  width: 65%
+}
+
+
+.task_card{
+	background-color: white;
+	width: 85%;
+	border-radius: 5px;
+	margin-left: 15px;
+	box-shadow: 0px 3px 4px darkgrey;
+ h4{
+	padding: 10px 0px 0px 15px;
+  .task_function{
+  	margin-left: 15px;
+  }
+ }
+}
+
+#btn_nav{
+    padding-left: 0px;
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+
+.menu_btn{
+    float: left;
+    border-width: 0px;
+    margin: 0px 0px 5px 5px;
+    width: 30%;
+    text-align: center;
+}
+ .menu_btn_function{
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-width: 0px;
+    background-color: #777777;
+    border-radius: 3px;
+    padding: 5px 0px;
+    font-size: 12px;
+    width: 100%;
+    display: block;
+ }
+ .menu_btn_function:hover{
+  text-decoration:none;
+  color: #777777;
+  background-color: #ffffff;
+  border: solid 1px #777777;
+}
+
+
+.task_time {
+    float: left;
+    margin-top: -13px;
+    margin-left: 42px;
+ p,task_time{
+      padding-left: 15px;
+      font-size:13px;
+ }
+}
+
+.task_function{
+  margin: 15px 0px 0px 15px;
+}
+
+.material-icons{
+  font-size: 15px;
+  vertical-align: text-bottom;
+  letter-spacing: 12px;
+  margin-left: -10px;
+}
+
+
+.btn_done {
+    border-width: 0px;
+    background-color: #777777;
+    border-radius: 3px;
+    color: #ffffff;
+    margin:0px 0px 10px 5px;
+    padding: 5px 0px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    width: 30%;
+}
+.btn_done:hover{
+  text-decoration:none;
+  color: #777777;
+  background-color: #ffffff;
+  border: solid 1px #777777;
+}
+
+.btn_function {
+    border-width: 0px;
+    background-color: #777777;
+    border-radius: 3px;
+    margin: 0px 0px 5px 0px;
+    color: #ffffff;
+    padding: 6px 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 25%
+}
+.btn_function:hover{
+  text-decoration:none;
+  color: #777777;
+  background-color: #ffffff;
+  border: solid 1px #777777;
+}
+
+
+
+/* ---------- タイマー ---------- */
+
+.time_wrap {
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 100%;
+}
+.time{
+	background-color: white;
+	padding-top: 40%;
+  padding-bottom: 40%;
+  width: 100%;
+  border-radius: 20%;
+  border: solid 2px #777777;
+  color: #777777;
+}
+#clock, p{
+  margin-bottom: 0px;
+  font-size: 2rem;
+}
+
+.timer_button_wrap {
+    width: 22%;
+    margin-left: auto;
+    margin-right: auto;
+#start,#reset,#stop{
+  margin-left: 5px;
+  border-width: 0px;
+  background-color: #777777;
+  border-radius: 3px;
+  margin: 0px 0px 5px 0px;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+}
+
+
+.timer_button{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.record_button {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
+.btn_record{
+  background-color: #777777;
+  color: #ffffff;
+  padding: 5px 65px;
+  border-radius: 3px;
+  font-size: 12px;
+  border-width: 0px;
+ }
+}
+.btn_record:hover {
+  text-decoration:none;
+  color: #777777;
+  background-color: #ffffff;
+  border: solid 1px #777777;
+}
+
+
+
+.record_task_card {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 10%;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+
+
+/* ---------- タスク変更 ---------- */
+
+.task_edit{
+  outline: none;
+  border: none;
+}
+
+
+#back{
+  padding: 7.5px 25px;
+}
+
+
+
+

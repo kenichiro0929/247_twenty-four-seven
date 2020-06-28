@@ -1,0 +1,9 @@
+<h3>What are you up to ?</h3>
+
+<%= form_with(model: @task, local: true) do |f| %>
+	
+	<%= render "shared/error_messages",object: @task %>
+
+	<%= f.text_field :content, class: "to_do_task_form" %>
+	<%= f.submit "add", class: "btn_function" %>
+<% end %>

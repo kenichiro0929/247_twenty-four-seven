@@ -1,6 +1,0 @@
-<li id ="task-<%= task.id %>">
-
-	<span class="user"><%= link_to task.user.name,task.user %></span>
-	<span class="content"><%= task.content %></span>
-	<%= link_to "削除",task,method: :delete,data:{confirm:"you sure?"} %>
-</li>
