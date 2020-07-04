@@ -43,6 +43,7 @@
             </li>
           <% else %>
             <li class= "login"><%= link_to "log in", login_path,id: "login" %></li>
+            <li class= "guest_login"><%= link_to "guest log in", guest_path,id: "guest_login",method: :post %></li>
           <% end %>
 
           <!-- <li class= "about"><%= link_to "about 247", "/about",id: "about" %></li> -->

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/login', to:'sessions#create'
   delete '/logout', to:'sessions#destroy'
   post '/done' , to: 'situations#update'
+  post '/guest', to: 'static_pages#create'
+  get  '/guest', to: 'static_pages/#new'
 
 
 

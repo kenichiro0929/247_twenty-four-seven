@@ -11,7 +11,13 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-
-
+  def create
+    user = User.find_by(email: 'guest@example.com')
+    log_in user
+    flash[:success] = "log in as guest user."
+    redirect_to root_url
+  end
 
 end
+
+
